@@ -8,7 +8,7 @@ import json
 import logging
 
 
-jsonpath = "/root"
+jsonpath = "/etc/mycompletion"
 
 
 logger=logging.getLogger()
