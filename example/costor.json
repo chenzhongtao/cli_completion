@@ -1,13 +1,17 @@
 {
-	"controller": {
-			"sub11":["--p1=", "--p2=", "--p3="],
-			"sub12":["--q1=", "--q2="]
-			},
+	"controller": ["--conf"],
 	"virtdisk": {
-			"sub21":["--w1=", "--w2=", "--w3="],
-			"sub22":["--x1=", "--x2="]
+			"create":["--name","--capacity","--backend"],
+			"delete":["--name"],
+			"list":[],
+			"inspect":["--name"],
+			"snapshot":{
+						"create":["--name","--snapshot-name"],
+						"delete":["--name","--snapshot-name"],
+						"recovery":["--name","--snapshot-name"]
+					}
 			},
-	"engine": ["--conf"]
+	"engine": ["--conf"],
 	"subpool": {
 			"add":["--device"],
 			"delete":["--device"],
@@ -21,12 +25,11 @@
 						"create":["--name","--lunName"],
 						"delete":["--name","--lunName"],
 						"list":["--lunName"],
-						"rollback":["--name","--lunName"],
+						"rollback":["--name","--lunName"]
 					}
 			},
 	"disk": {
-			"sub21":["--w1=", "--w2=", "--w3="],
-			"sub22":["--x1=", "--x2="]
+			"list":{}
 			},
 	"--addr": {},
 	"--debug": {},
