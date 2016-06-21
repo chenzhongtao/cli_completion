@@ -1,0 +1,35 @@
+{
+	"controller": {
+			"sub11":["--p1=", "--p2=", "--p3="],
+			"sub12":["--q1=", "--q2="]
+			},
+	"virtdisk": {
+			"sub21":["--w1=", "--w2=", "--w3="],
+			"sub22":["--x1=", "--x2="]
+			},
+	"engine": ["--conf"]
+	"subpool": {
+			"add":["--device"],
+			"delete":["--device"],
+			"display":[]
+			},
+	"virtlun": {
+			"create":["--name","--size"],
+			"delete":["--name"],
+			"list":["--name"],
+			"snapshot":{
+						"create":["--name","--lunName"],
+						"delete":["--name","--lunName"],
+						"list":["--lunName"],
+						"rollback":["--name","--lunName"],
+					}
+			},
+	"disk": {
+			"sub21":["--w1=", "--w2=", "--w3="],
+			"sub22":["--x1=", "--x2="]
+			},
+	"--addr": {},
+	"--debug": {},
+	"--verbose": {},
+	"--version": {}
+}
