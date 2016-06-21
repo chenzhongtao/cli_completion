@@ -8,7 +8,7 @@ git clone https://github.com/chenzhongtao/cli_completion.git
 cd cli_completion  
 mkdir /etc/mycompletion  
 cp  completion.py  /etc/mycompletion  
-chmod +x /etc/mycompletion/completion.py 
+chmod +x /etc/mycompletion/completion.py   
 cp completion.sh /etc/bash_completion.d/  
 . /etc/bash_completion.d/completion.sh  
 2. 添加命令行相关的json文件  
@@ -21,4 +21,18 @@ echo "complete -F __cmd_completion mycli" >> /etc/bash_completion.d/completion.s
 
 如何你的命令行名字为hadoop, 先在/etc/mycompletion/下创建一个hadoop.json文件,规则可以参考mycli.json,然后执行  
 echo "complete -F __cmd_completion hadoop" >> /etc/bash_completion.d/completion.sh   
-. /etc/bash_completion.d/completion.sh   
+. /etc/bash_completion.d/completion.sh  
+
+
+##costor添加命令联想功能
+
+git clone https://github.com/chenzhongtao/cli_completion.git  
+cd cli_completion  
+mkdir /etc/mycompletion  
+cp completion.py /etc/mycompletion  
+chmod +x /etc/mycompletion/completion.py  
+cp completion.sh /etc/bash_completion.d/  
+cp example/costor.json /etc/mycompletion/  
+echo "complete -F __cmd_completion costor" >> /etc/bash_completion.d/completion.sh  
+echo "complete -F __cmd_completion  ./costor" >> /etc/bash_completion.d/completion.sh  
+. /etc/bash_completion.d/completion.sh  
